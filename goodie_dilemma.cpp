@@ -33,6 +33,7 @@ int main ()
   int n = 0;
   int k = 0;
 
+  // Reading the input file	
   ifstream MyReadFile("filename.txt");
   
   int counter = 0;
@@ -47,7 +48,7 @@ int main ()
      string delim = ":";
      
      
-
+   // Parsing the input values 
     int start = 0;
     int end = s.find(delim);
     string nname;
@@ -80,6 +81,7 @@ int main ()
   
   goodieList.sort();
   
+  // Iterating through the list and finding the minimum difference
   list<goodie>::iterator it = goodieList.begin();
   list<goodie>::iterator it1 = goodieList.begin();
   int difference = INT_MAX;
@@ -131,7 +133,7 @@ int main ()
       it++;
   }
   
-  
+  // Writing the output to a file
   ofstream MyWriteFile("output.txt");
 
   
